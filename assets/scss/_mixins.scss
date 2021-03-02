@@ -1,5 +1,4 @@
-@import './variables';
-//import할 때는 _안붙여도 됨
+@import "variables";
 
 @mixin layer($position, $top, $right, $bottom, $left) {
 	position: $position;
@@ -18,15 +17,15 @@
 }
 
 @mixin shadow($hori, $vert, $blur, $alpha) {
-	box-shadow: $hori, $vert, $blur rgba(0,0,0,$alpha);
+	box-shadow: $hori $vert $blur rgba(0,0,0, $alpha);
 }
 
 @mixin bgDark($opacity) {
-	background-color: rgba(0,0,0, $opacity);
+	background-color: rgba(0, 0, 0, $opacity);
 }
 
 @mixin bgLight($opacity) {
-	background-color: rgba(255,255,255, $opacity);
+	background-color: rgba(255, 255, 255, $opacity);
 }
 
 @mixin flex($hori: flex-start, $vert: stretch) {
@@ -66,3 +65,4 @@
 		@content;
 	}
 }
+
