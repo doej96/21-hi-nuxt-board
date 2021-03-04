@@ -21,7 +21,7 @@ export default {
 
 	},
 	async asyncData() {
-		let { data } = await axios.get(`http://127.0.0.1:3000/api/list`)
+		let { data } = await axios.get(`http://3.35.46.18:3000/api/list`)
 		let list = data.map(v => {
 			v.wdate = moment(v.created).format('YYYY-MM-DD');
 			return v
